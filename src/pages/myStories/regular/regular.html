@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+      <button ion-button menuToggle>
+        <ion-icon style="font-size: 30px; margin-top: 10px" name="menu"></ion-icon>
+        <span style="margin-top: 10px; font-size: 15px">Regular</span>
+      </button>
+
+    </ion-title>
+    <ion-buttons start>
+      <button (click)="refresh()">Refresh</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button (click)="add()">Add</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let person of people">
+      {{person.firstname}} {{person.lastname}}
+    </ion-item>
+  </ion-list>
+</ion-content>
